@@ -18,11 +18,11 @@ let books = [
 // ... rest of your code ...
 
 
-app.get('/books', (req, res) => {
+app.get('/api/books', (req, res) => {
     res.json(books);
 });
 
-app.post('/books', (req, res) => {
+app.post('/api/books', (req, res) => {
     const { title, rating } = req.body;
     const newBook = { title, rating };
     books.push(newBook);
